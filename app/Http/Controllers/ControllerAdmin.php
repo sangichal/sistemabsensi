@@ -7,13 +7,22 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
-class Controller extends BaseController
+class ControllerAdmin extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    function signIn()
+    function dataGuru()
+    {
+        return view('admin/dataGuru');
+    }
+
+    function dashboard()
     {
         return view('admin/home');
+    }
+
+    function tambahGuru()
+    {
+        return view('admin/tambahGuru');
     }
     
 }
