@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse w-100 order-3 dual-collapse" id="mynavbar">
         <ul class="navbar-nav ml-auto">
-            @yield('isiNavbar');
+            @yield('isiNavbar')
         </ul>
     </div>
 </nav>

@@ -22,7 +22,6 @@
                     <tr>
                         <th>NIK</th>
                         <th>Nama</th>
-                        <th>Tanggal Lahir</th>
                         <th>Alamat</th>
                         <th>Pendidikan</th>
                         <th>Email</th>
@@ -31,10 +30,9 @@
                 <tbody>
                     <td> 55291212 </td>
                     <td><a href="{{url('detailGuru')}}"> Sinta </a> </td>
-                    <td> 19/10/2011 </td>
                     <td> Brebes </td>
-                    <td> SMK Karya Bhakti Brebes </td>
-                    <td> deanheart09@gmail.com </td>
+                    <td> SMK Karya </td>
+                    <td> deanheart09</td>
                 </tbody>
             </table>
 
@@ -46,7 +44,7 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="alert alert-info" role="alert">
                 <h4 class="alert-heading">Data Guru</h4>
                 <p> Halaman ini merupakan halaman yang menampilkan semua data guru dimana. kau bisa menambahkan data

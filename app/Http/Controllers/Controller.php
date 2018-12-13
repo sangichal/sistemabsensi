@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-    function signIn()
+    function signIn(Request $request)
     {
-        return view('admin/home');
+        if (Auth::attempt(['NIK' => $request['username'], 'password' => $request['password']])) {
+            return view('admin/home');
+        } else {
+            return redirect()->back();
+        }
     }
-    
 }

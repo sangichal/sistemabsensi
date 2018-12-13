@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('login');
-});
+})->name('home');
 
 Route::post('signIn', [
     'uses' => 'Controller@signIn', 
@@ -21,8 +21,11 @@ Route::post('signIn', [
 );
 
 Route::get('dashboard', 
-    ['uses' => 'ControllerAdmin@dashboard',
-    'as' => 'dashboard']
+    [
+    'uses' => 'ControllerAdmin@dashboard',
+    'as' => 'dashboard',
+    'middleware' => 'auth'
+    ]
 );
 
 Route::get('dataGuru', 
@@ -40,3 +43,14 @@ Route::view('detailGuru', 'admin/detailGuru');
 Route::view('homeUsers', 'users/home');
 
 Route::view('jadwalUsers', 'users/jadwal');
+
+Route::post('/isiJurnal', [
+    'uses' => 'KegiatanController@isiJurnal',
+    'as' => 'isiJurnal'
+]);
+
+Route::post('/saveGuru', 
+['uses' => 'ControllerAdmin@saveGuru',
+'as' =>'saveGuru'
+]
+);

@@ -24,17 +24,26 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
-            <form action="">
+        <form action="{{ route('isiJurnal') }}" method="POST">
                 <div class="form-group">
                     <label for="">Isi Jurnal</label>
-                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                    <textarea class="form-control" name="jurnal" id="" rows="3"></textarea>
+                <input type="hidden" value="{{ csrf_token() }}" name="_token">
                 </div>
-                <a name="" id="" class="btn btn-primary" href="#" role="button"> Submit </a>
+<button type="submit" name="" id="" class="btn btn-primary btn-block">  Submit </button>
             </form>
         </div>
     </div>
 
-    <h6 class="text-right mt-3">Jurnal Kegiatan</h6>
+    <div class="row mt-3">
+    <div class="col-md">
+        <a name="" id="" class="btn btn-primary btn-sm" href="#" role="button">    <i class="fas fa-print    "></i> Cetak Jurnal</a>
+    </div>
+    <div class="col-md">
+        <h6 class="text-right mt-3">Jurnal Kegiatan</h6>
+    </div>
+    </div>
+    
     <table class="table table-bordered">
         <thead>
             <tr>
